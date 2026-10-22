@@ -1,0 +1,26 @@
+Assignment 6: Making the Impossible Possible
+Results from python starter_code.py (user run)
+Times are in seconds on the generated DNA sequences.
+
+Small-case tests: all four cases passed for all three implementations.
+
+Time recursive solution
+Size   LCS length   Time
+10     6            0.0033
+20     12           64.4285
+Stopped before size 50 because the size-20 run took more than 5 seconds.
+
+Comparing all approaches
+Size   Recursive   Memoization   Tabulation
+10     0.0011      0.0001        0.0000
+20     29.4039     0.0002        0.0001
+50     Too slow    0.0014        0.0004
+100    Too slow    0.0044        0.0014
+200    Too slow    0.0221        0.0054
+500    Too slow    0.1387        0.0401
+1000   Too slow    ERROR         0.1659
+
+Too slow: the comparison skips the recursive version above size 20.
+ERROR: memoization exceeded Python's recursion depth limit at size 1000.
+0.0000 means less than 0.00005 seconds when rounded to four decimal places.
+The two recursive size-20 times differ because they came from separate runs.
